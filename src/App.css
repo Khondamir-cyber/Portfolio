@@ -1,0 +1,80 @@
+.bg {
+	position: absolute;
+	z-index: 0;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	transition: 5s all;
+
+	.fluid {
+		background-color: var(--blue);
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		opacity: 0.5;
+		filter: blur(120px);
+		animation: fly 30s infinite;
+		transition: 5s all;
+	}
+
+	&.active {
+		width: 100px;
+		height: 60px;
+		top: 50%;
+		left: 20%;
+
+
+		.fluid {
+
+			background-color: var(--blue);
+			opacity: 1;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fly {
+	0% {
+		transform: translate(0, 0);
+		background-color: var(--blue);
+	}
+
+	25% {
+		transform: translate(50px, 20px);
+		background-color: var(--pink);
+	}
+
+	50% {
+		transform: translate(-60px, 200px);
+		background-color: var(--blue);
+	}
+
+	75% {
+		transform: translate(120px, -140px);
+		background-color: var(--pink);
+	}
+
+	100% {
+		transform: translate(0, 0);
+		background-color: var(--blue);
+	}
+}

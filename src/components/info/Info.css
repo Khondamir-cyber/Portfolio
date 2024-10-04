@@ -1,0 +1,253 @@
+.info {
+	margin-top: 100px;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 40px;
+		width: 100%;
+		height: 100%;
+		/* padding: 40px; */
+		border-radius: 24px;
+		background-color: #ffffff11;
+		padding-left: 0;
+		position: relative;
+
+		.leftSide {
+			height: 408px;
+			aspect-ratio: 1/1;
+
+			.img {
+				width: clamp(200px, 85vw, 560px);
+				position: absolute;
+				left: 0%;
+				bottom: 0;
+				border-radius: 20px;
+				overflow-x: hidden;
+
+				img {
+					width: 100%;
+					transform: translateX(-35px) translateY(4px);
+				}
+			}
+		}
+
+		.rightSide {
+			max-width: calc(50% + 80px);
+			width: 100%;
+			display: grid;
+			padding: 40px;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			grid-column-gap: 24px;
+			grid-row-gap: 24px;
+
+
+			.block:nth-child(1) {
+				grid-area: 1 / 1 / 2 / 2;
+			}
+
+			.block:nth-child(2) {
+				grid-area: 1 / 2 / 2 / 3;
+			}
+
+			.block:nth-child(3) {
+				grid-area: 2 / 1 / 3 / 2;
+			}
+
+			.block:nth-child(4) {
+				grid-area: 2 / 2 / 3 / 3;
+			}
+
+			.block:nth-child(5) {
+				grid-area: 3 / 1 / 4 / 3;
+			}
+
+			.block {
+				display: flex;
+				width: 100%;
+
+				.left {
+					height: 100%;
+					max-width: 100px;
+					width: 100%;
+					background-color: var(--yellow);
+					border-radius: 20px 0 0 20px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+
+					.icon {
+
+
+						svg {
+							width: 36px;
+							height: 36px;
+							opacity: 0.5;
+
+							path,
+							circle {
+								stroke: var(--main);
+							}
+						}
+
+						&.work {
+							svg {
+								path:nth-child(2) {
+									fill: var(--main);
+								}
+							}
+						}
+					}
+
+
+
+				}
+
+				.right {
+					position: relative;
+					overflow: hidden;
+					background-color: #ffffff11;
+					width: 100%;
+					height: 120px;
+					border-radius: 0 20px 20px 0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.text {
+						font-size: clamp(20px, 3vw, 24px);
+						text-transform: uppercase;
+					}
+
+
+
+				}
+			}
+		}
+
+
+	}
+}
+
+@media screen and (max-width: 1240px) {
+	.info {
+		margin-top: 200px;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 32px;
+
+			.leftSide {
+				display: flex;
+				justify-content: center;
+				height: 64px;
+
+				.img {
+					width: 240px;
+					left: unset;
+					bottom: unset;
+					top: -120px;
+					border-radius: 50%;
+					background-color: var(--yellow);
+					overflow: hidden;
+
+					/* &::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						border-radius: 40px;
+						background: #98498D;
+						width: 100%;
+						height: 100%;
+						z-index: 2;
+						transition: .3s all;
+					}
+
+					&::before {
+						filter: blur(24px);
+						content: '';
+						inset: -20px;
+						position: absolute;
+						z-index: -1;
+						background: conic-gradient(from var(--deg), #fff, #dd65cd, #fff);
+						animation: girar 3s linear infinite;
+						display: flex;
+						opacity: 1;
+						border-radius: 40px;
+					} */
+
+					img {
+						transform: translateX(0) translateY(24px);
+					}
+				}
+
+			}
+
+			.rightSide {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 764px) {
+	.info {
+		.container {
+			.rightSide {
+				grid-template-columns: 1fr;
+
+				.block {
+					grid-area: auto !important;
+					width: clamp(260px, 75vw, 90%);
+					margin: 0 auto;
+					display: flex;
+					flex-direction: column;
+
+					.left {
+						max-width: 100%;
+						width: 100%;
+						height: 48px;
+						border-radius: 20px 20px 0 0;
+
+						.icon {
+							display: flex;
+							height: auto;
+							width: 24px;
+
+							svg {
+								width: 100%;
+								height: auto;
+							}
+						}
+					}
+
+					.right {
+						height: 80px;
+						border-radius: 0 0 20px 20px;
+
+						.text {
+							font-size: clamp(16px, 2vw, 20px);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes girar {
+	from {
+		--deg: 0deg;
+	}
+
+	to {
+		--deg: 360deg;
+	}
+}

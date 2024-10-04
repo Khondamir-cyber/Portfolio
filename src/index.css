@@ -1,0 +1,56 @@
+:root {
+  --main: #131313;
+  --pink: #c13ccf;
+  --yellow: rgb(236, 255, 139);
+  --gray: #F4F4F4;
+  font-family: 'Eina';
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: var(--main);
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: 1440px;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Eina';
+  src: url('/public/fonts/Eina03-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Eina';
+  src: url('/public/fonts/Eina03-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Eina';
+  src: url('/public/fonts/Eina03-Bold.ttf');
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 64px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+
+}
