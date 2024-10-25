@@ -41,3 +41,12 @@ nav {
 		&.active {}
 	}
 }
+
+@media screen and (max-width: 435px) {
+	nav {
+		.container {
+			padding: 0 32px;
+			gap: 24px;
+		}
+	}
+}

@@ -124,3 +124,17 @@ html {
 	opacity: 1;
 	color: var(--yellow);
 }
+
+@media screen and (max-width: 768px) {
+	.parallax .scroller {
+		font-size: 48px;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+	.parallax .scroller {
+		font-size: 32px;
+	}
+
+}

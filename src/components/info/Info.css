@@ -157,31 +157,6 @@
 					background-color: var(--yellow);
 					overflow: hidden;
 
-					/* &::after {
-						content: '';
-						position: absolute;
-						left: 0;
-						right: 0;
-						border-radius: 40px;
-						background: #98498D;
-						width: 100%;
-						height: 100%;
-						z-index: 2;
-						transition: .3s all;
-					}
-
-					&::before {
-						filter: blur(24px);
-						content: '';
-						inset: -20px;
-						position: absolute;
-						z-index: -1;
-						background: conic-gradient(from var(--deg), #fff, #dd65cd, #fff);
-						animation: girar 3s linear infinite;
-						display: flex;
-						opacity: 1;
-						border-radius: 40px;
-					} */
 
 					img {
 						transform: translateX(0) translateY(24px);
@@ -236,6 +211,26 @@
 							font-size: clamp(16px, 2vw, 20px);
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.info {
+		.container {
+			.leftSide {
+				.img {
+					width: 200px;
+				}
+			}
+
+			.rightSide {
+				padding: 0;
+
+				.block {
+					width: 100%;
 				}
 			}
 		}

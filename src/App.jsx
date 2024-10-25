@@ -6,10 +6,10 @@ import AnySize from './components/anySize/AnySize'
 import About from './components/about/About'
 
 // import { Merque } from './components/merque/Merque'
-import { Projects_f } from './components/projects_f/Projects_f'
-import PolygonCard from './components/polygonCard/PolygonCard'
+
 import Info from './components/info/Info'
 import ParallaxText from './components/merque/Merque'
+import Footer from './components/footer/Footer'
 
 
 
@@ -38,13 +38,7 @@ function App() {
       <About />
 
       <AnySize />
-      <Projects_f />
-
-      <br />
-      <br />
-      <br />
-
-      <PolygonCard />
+      <Footer />
     </>
   )
 }

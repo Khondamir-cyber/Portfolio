@@ -18,6 +18,18 @@
 		text-transform: uppercase;
 		box-shadow: 0 0 0 20px var(--main);
 
+
+		&:hover {
+			transition: .3s all;
+
+			.inner {
+				background-color: var(--main) !important;
+				transition: .3s all;
+				color: var(--yellow);
+				/* border: 1px solid var(--yellow); */
+			}
+		}
+
 		&.title {
 			left: 0;
 			border-radius: 0 20px 0 0;
@@ -45,15 +57,14 @@
 			}
 
 			.inner {
-				width: 100%;
-				height: 100%;
+
 				cursor: pointer;
-				background: rgba(193, 60, 207, 1);
-				background: linear-gradient(90deg, rgba(193, 60, 207, 1) 0%, rgba(236, 255, 139, 1) 110%);
+				background-color: var(--yellow);
 				width: 100%;
 				height: 100%;
 				padding: 20px;
 				border-radius: 20px;
+				border: 1px solid var(--yellow);
 				transition: .3s all;
 			}
 		}
@@ -86,12 +97,13 @@
 
 			.inner {
 				cursor: pointer;
-				background: rgb(181, 72, 198);
-				background: linear-gradient(90deg, rgba(236, 255, 139, 1) -10%, rgba(193, 60, 207, 100%));
+				background-color: var(--yellow);
 				width: 100%;
 				height: 100%;
 				padding: 20px;
 				border-radius: 20px;
+				border: 1px solid var(--yellow);
+
 			}
 		}
 	}
@@ -108,5 +120,98 @@
 
 	100% {
 		object-position: top center;
+	}
+}
+
+@media screen and (max-width: 885px) {
+	.absolute {
+		width: clamp(200px, 5vw, 240px);
+	}
+
+}
+
+@media screen and (max-width: 760px) {
+	.mainInfo {
+		overflow: visible;
+		max-height: 400px;
+		margin-bottom: 80px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		img {
+			border-radius: 20px;
+		}
+
+		.absolute {
+			box-shadow: none;
+			background: transparent;
+			bottom: -80px;
+
+
+			&.title,
+			&.work {
+				display: flex;
+				border-radius: 0px;
+
+
+				&::before {
+					display: none;
+				}
+
+				&::after {
+					display: none;
+				}
+			}
+
+			&.work {}
+		}
+	}
+
+
+}
+
+@media screen and (max-width: 610px) {
+	.mainInfo {
+		flex-direction: column-reverse;
+		gap: 12px;
+
+		.layer {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: space-between;
+			/* flex-wrap: wrap; */
+			gap: 12px;
+
+			.absolute {
+				position: unset;
+
+				.inner {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 440px) {
+
+	.mainInfo {
+		.layer {
+			flex-direction: column;
+
+			.absolute {
+
+				&.title,
+				&.work {
+					width: 100%;
+				}
+			}
+		}
 	}
 }

@@ -4,6 +4,7 @@
 	height: 100%;
 
 	.container {
+		padding: 0 32px;
 
 
 		.mainTitle {
@@ -11,7 +12,7 @@
 			color: white;
 			margin: 0 auto;
 			margin-bottom: 90px;
-			font-size: clamp(24px, 7vw, 150px);
+			font-size: clamp(24px, 12vw, 150px);
 			text-transform: uppercase;
 			position: relative;
 			width: max-content;
@@ -20,6 +21,7 @@
 				position: relative;
 				z-index: 1;
 				color: var(--main);
+				display: inline-block;
 
 				&:after {
 					content: 'My Works';
@@ -36,16 +38,26 @@
 			}
 
 			.bg {
-				display: block;
-				width: 110%;
-				height: 50%;
 				position: absolute;
+				display: block;
 				top: unset;
 				bottom: 0;
+				width: 0;
+				height: 50%;
 				background-color: var(--yellow);
+				/* Цвет заднего фона */
 				transform: translateX(-5%);
 				border-radius: 12px;
 				transition: .2s all;
+
+				/* display: block;
+				width: 110%;
+				height: 50%;
+				position: absolute;
+				
+				background-color: var(--yellow);
+				transform: translateX(-5%);
+				 */
 			}
 		}
 
@@ -68,4 +80,16 @@
 	}
 
 
+}
+
+@media screen and (max-width: 440px) {
+	.about {
+		.container {
+
+			.grid {
+				margin-top: 128px;
+				gap: 128px;
+			}
+		}
+	}
 }

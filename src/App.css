@@ -1,14 +1,17 @@
 .bg {
 	position: absolute;
 	z-index: 0;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
 	transition: 5s all;
 
 	.fluid {
-		background-color: var(--blue);
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--yellow);
 		width: 200px;
 		height: 200px;
 		border-radius: 50%;
@@ -19,17 +22,13 @@
 	}
 
 	&.active {
-		width: 100px;
-		height: 60px;
-		top: 50%;
-		left: 20%;
-
-
 		.fluid {
-
-			background-color: var(--blue);
+			top: 5%;
+			left: 20%;
+			background-color: var(--yellow);
 			opacity: 1;
 		}
+
 	}
 }
 
@@ -55,7 +54,7 @@
 @keyframes fly {
 	0% {
 		transform: translate(0, 0);
-		background-color: var(--blue);
+		background-color: var(--yellow);
 	}
 
 	25% {
@@ -65,7 +64,7 @@
 
 	50% {
 		transform: translate(-60px, 200px);
-		background-color: var(--blue);
+		background-color: var(--yellow);
 	}
 
 	75% {
@@ -75,6 +74,6 @@
 
 	100% {
 		transform: translate(0, 0);
-		background-color: var(--blue);
+		background-color: var(--yellow);
 	}
 }
