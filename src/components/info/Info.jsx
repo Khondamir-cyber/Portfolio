@@ -9,7 +9,7 @@ export default function Info() {
 		<div className='info'>
 			<div className="container">
 				<div className="leftSide">
-					<div className="img"><img src="https://Khondamir-cyber.github.io/portfolio/PHOTO.png" /></div>
+					<div className="img"><img src="https://Khondamir-cyber.github.io/Portfolio/PHOTO.png" /></div>
 					<div className="links"></div>
 				</div>
 				<div className="rightSide">
