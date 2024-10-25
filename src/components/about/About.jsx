@@ -70,7 +70,7 @@ export default function About() {
           <span className='bg' ref={bgRef}></span>
         </h2>
         <div className="grid">
-          <MainInfo cl={'mainInfo'} img={'https://Khondamir-cyber.github.io/Portfolio/Desktop.jpg'} work={'Wordpress dev'} title={"TARX"} />
+          <MainInfo cl={'mainInfo'} img={'/public/Desktop.jpg'} work={'Wordpress dev'} title={"TARX"} />
           <MainInfo cl={'mainInfo'} img={'https://Khondamir-cyber.github.io/Portfolio/Sushi.jpg'} work={'Vanilla code dev'} title={"SUSHI"} />
           <MainInfo cl={'mainInfo'} img={'https://Khondamir-cyber.github.io/Portfolio/Yoga.jpg'} work={'Vanilla code dev'} title={"MEDITATION"} />
         </div>
